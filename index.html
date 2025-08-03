@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>stimming dot com</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="main.js"></script>
+</head>
+<body>
+ 
+<audio src="audio/click-down.mp3" class="clicky" id="click-down"></audio>    
+<audio src="audio/click-up.mp3" class="clicky" id="click-up"></audio>
+<audio src="audio/kb-down.mov" class="keyboard" id="kbdown"></audio>
+<audio src="audio/kb-up.mov" class="keyboard" id="kbup"></audio>
+<audio src="audio/mkb-down.mov" class="mkeyboard" id="mkbdown"></audio>
+<audio src="audio/mkb-up.mov" class="mkeyboard" id="mkbup"></audio>
+<audio src="audio/button-down.mov" class="old" id="olddown"></audio>
+<audio src="audio/button-up.mov" class="old" id="oldup"></audio>
+<audio src="audio/switch-down.mov" class="switch" id="switchdown"></audio>
+<audio src="audio/switch-up.mov" class="switch" id="switchup"></audio>
+<audio src="audio/clack-down.mov" class="clack" id="clackdown"></audio>
+<audio src="audio/clack-up.mov" class="clack" id="clackup"></audio>
+<audio src="audio/quick-unclick.wav" class="unclick" id="unclick"></audio>
+
+<header class="header" id="title">
+   <h1>stimming dot com</h1> 
+   <button class="button" id="themeswitch" onclick="themeSwitch()" onmousedown="down()" onmouseup="up()" >theme</button>
+</header>
+
+
+<main>
+    <div class="column">
+        <button class="stimming" id="clicker" onmousedown="down()" onmouseup="up()">clicker</button>
+        <button class="stimming" id="old" onmousedown="oldDown()" onmouseup="oldUp()">old button</button>
+        <button class="stimming" id="switch" onmousedown="switchDown()" onmouseup="switchUp()">switch</button>
+    </div>
+    <div class="column">
+        <button class="stimming" id="newsound" onmousedown="clackDown()" onmouseup="clackUp()">thock</button>
+        <button class="stimming" id="keyboard" onmousedown="kbDown()" onmouseup="kbUp()">keyboard #1</button>
+        <button class="stimming" id="mkeyboard" onmousedown="mkbDown()" onmouseup="mkbUp()">keyboard #2 </button>
+    </div>
+    <div class="column">
+        <input id="slide" type="range" list="markers" value="0" step="20" min="0" max="100"  oninput="unClick()">
+        <datalist id="markers">
+            <option value="0"></option>
+            <option value="20"></option>
+            <option value="40"></option>
+            <option value="60"></option>
+            <option value="80"></option>
+            <option value="100"></option>
+        </datalist>
+    </div>
+</main>
+
+
+
+</body>
+</html>
